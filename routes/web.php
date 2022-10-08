@@ -23,3 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/schedules', [App\Http\Controllers\ScheduleController::class, 'index'])->name('schedule.index');
 Route::get('/schedules/create', [App\Http\Controllers\ScheduleController::class, 'create'])->name('schedule.create');
+Route::post('/schedules/create', [App\Http\Controllers\ScheduleController::class, 'store'])->name('schedule.store');

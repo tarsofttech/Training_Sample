@@ -17,4 +17,14 @@ class ScheduleController extends Controller
     {
         return view('schedules.create');
     }
+
+    public function store(Request $request)
+    {
+        $schedule = new Schedule();
+        $schedule->title = $request->title;
+        $schedule->description = $request->description;
+        $schedule->save();
+        
+        return redirect()->route('schedule.index');
+    }
 }

@@ -8,7 +8,8 @@
                 <div class="card-header">{{ __('Dashboard') }}</div>
 
                 <div class="card-body">
-                   <form action="" method="POST">
+                   <form action="{{ route('schedule.store') }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <label>Title</label>
                             <input type="text" name="title" class="form-control" placeholder="Please Enter Schedule Title">
