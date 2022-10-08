@@ -13,12 +13,14 @@
                             <th>No.</th>
                             <th>Title</th>
                             <th>Description</th>
+                            <th>Created</th>
                         </tr>
                         @foreach ($schedules as $schedule)
                         <tr>
                             <td>{{ $schedule->id }}</td>
                             <td>{{ $schedule->title }}</td>
                             <td>{{ $schedule->description }}</td>
+                            <td>{{ $schedule->created_at->diffForHumans() }}</td>
                         </tr>
                         @endforeach
                     </table>
