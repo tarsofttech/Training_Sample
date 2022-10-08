@@ -14,6 +14,7 @@
                             <th>Title</th>
                             <th>Description</th>
                             <th>Created</th>
+                            <th>Action</th>
                         </tr>
                         @foreach ($schedules as $schedule)
                         <tr>
@@ -21,6 +22,9 @@
                             <td>{{ $schedule->title }}</td>
                             <td>{{ $schedule->description }}</td>
                             <td>{{ $schedule->created_at->diffForHumans() }}</td>
+                            <td>
+                                <a href="{{ route('schedule.show', $schedule) }}" class="btn btn-primary">Show</a>
+                            </td>
                         </tr>
                         @endforeach
                     </table>

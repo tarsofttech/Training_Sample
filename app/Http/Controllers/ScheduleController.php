@@ -24,7 +24,12 @@ class ScheduleController extends Controller
         $schedule->title = $request->title;
         $schedule->description = $request->description;
         $schedule->save();
-        
+
         return redirect()->route('schedule.index');
+    }
+
+    public function show(Schedule $schedule)
+    {
+        return view('schedules.show', compact('schedule'));
     }
 }
