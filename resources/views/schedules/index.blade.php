@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Schedule') }}</div>
+                <div class="card-header">{{ __('Schedule Index') }}</div>
 
                 <div class="card-body">
                     <table class="table">
@@ -24,6 +24,8 @@
                             <td>{{ $schedule->created_at->diffForHumans() }}</td>
                             <td>
                                 <a href="{{ route('schedule.show', $schedule) }}" class="btn btn-primary">Show</a>
+                                <a href="{{ route('schedule.edit', $schedule) }}" class="btn btn-success">Edit</a>
+                                <a href="{{ route('schedule.delete', $schedule) }}" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                         @endforeach
